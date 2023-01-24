@@ -1,6 +1,6 @@
 ﻿/*
 Задача 19
-Напишите программу, которая принимает на вход пятизначное число и проверяет, 
+Напишите программу, которая принимает на вход пятизначное число и проверяет,
 является ли оно палиндромом.
 14212 -> нет
 12821 -> да
@@ -8,22 +8,20 @@
 */
 string getCorrectNumber()
 {
-    Console.WriteLine("Введите пятизначное число: ");
-    int inputNumber = -1;
+    int inputNumber;
     string inputString;
     while(true)
-    {   
+    {
+        Console.Write("Введите пятизначное число: ");
         inputString = Console.ReadLine();
         bool isCorrect = int.TryParse(inputString, out inputNumber);
-        // Проверка работает таким образом, что все целые пятизначные положительные числа, 
-        // включая число 00000, рассматривается как соответствующее условиям задачи
-        if(inputString.Length == 5 && inputNumber >= 0)
-            break;
+        if(inputString.Length == 5 && inputNumber >= 0 && isCorrect)
+            return inputString;
         else
             Console.WriteLine("Введенные данные не соответствуют условиям задачи!");
     }
-    return inputString;
 }
+
 string stringNumber = getCorrectNumber();
 if(stringNumber[0] == stringNumber[4] && stringNumber[1] == stringNumber[3])
 {

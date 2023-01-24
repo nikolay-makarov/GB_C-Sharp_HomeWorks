@@ -6,15 +6,11 @@
 */
 int getCorrectNumber()
 {
-    string inputNumber;
-    bool isCorrect;
     int correctNumber;
     while(true)
     {
         Console.Write("Введите целое положительное число: ");
-        inputNumber = Console.ReadLine();
-        isCorrect = int.TryParse(inputNumber, out correctNumber);
-        if(isCorrect && correctNumber > 0)
+        if(int.TryParse(Console.ReadLine(), out correctNumber) && correctNumber > 0)
             return correctNumber;
         else
             Console.WriteLine("Введены неверные данные!");

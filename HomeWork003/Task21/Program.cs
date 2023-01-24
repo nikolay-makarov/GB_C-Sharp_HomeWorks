@@ -1,21 +1,17 @@
 ﻿/*
 Задача 21
-Напишите программу, которая принимает на вход координаты 
+Напишите программу, которая принимает на вход координаты
 двух точек и находит расстояние между ними в 3D пространстве.
 A (3,6,8); B (2,1,-7) -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53
 */
 float getCorrectNumber(string coordinateName, string dotName)
 {
-    string inputNumber;
-    bool isCorrect;
     float correctNumber;
     while (true)
     {
         Console.Write($"Введите координату {coordinateName} точки {dotName}: ");
-        inputNumber = Console.ReadLine();
-        isCorrect = float.TryParse(inputNumber, out correctNumber);
-        if (isCorrect)
+        if (float.TryParse(Console.ReadLine(), out correctNumber))
             return correctNumber;
         else
             Console.WriteLine("Должно быть введено число!");
