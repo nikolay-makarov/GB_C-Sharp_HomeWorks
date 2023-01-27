@@ -4,7 +4,7 @@
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0
  */
-int getCorrectNumber()
+int GetCorrectNumber()
 {
     int correctNumber;
     while (true)
@@ -17,17 +17,17 @@ int getCorrectNumber()
     }
 }
 
-int[] makeArray(int dimention)
+int[] MakeArray(int dimention)
 {
-    const int Down = -99, Up = 100;
+    const int Begin = -99, End = 100;
     int[] array = new int[dimention];
     Random random = new Random();
     for (int i = 0; i < dimention; i++)
-        array[i] = random.Next(Down, Up);
+        array[i] = random.Next(Begin, End);
     return array;
 }
 
-int oddElementsSumm(int[] array)
+int OddElementsSumm(int[] array)
 {
     int result = 0;
     for (int i = 0; i < array.Length; i++)
@@ -35,7 +35,7 @@ int oddElementsSumm(int[] array)
     return result;
 }
 
-void printArray(int[] array)
+void PrintArray(int[] array)
 {
     Console.Write('[');
     Console.Write(string.Join(", ", array));
@@ -43,8 +43,8 @@ void printArray(int[] array)
 }
 
 Console.WriteLine("Программа возвращает сумму элементов, стоящих на нечётных позициях.");
-int dimention = getCorrectNumber();
-int[] myArray = makeArray(dimention);
-int result = oddElementsSumm(myArray);
-printArray(myArray);
+int dimention = GetCorrectNumber();
+int[] myArray = MakeArray(dimention);
+int result = OddElementsSumm(myArray);
+PrintArray(myArray);
 Console.Write($" -> {result}\n");

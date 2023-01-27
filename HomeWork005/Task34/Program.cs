@@ -3,7 +3,7 @@
 Напишите программу, которая покажет количество чётных чисел в массиве.
 [345, 897, 568, 234] -> 2
  */
-int getCorrectNumber()
+int GetCorrectNumber()
 {
     int correctNumber;
     while (true)
@@ -16,28 +16,28 @@ int getCorrectNumber()
     }
 }
 
-int[] makeArray(int dimention)
+int[] MakeArray(int dimention)
 {
-    const int Down = 100, Up = 1000;
+    const int Begin = 100, End = 1000;
     int[] array = new int[dimention];
     Random random = new Random();
     for (int i = 0; i < dimention; i++)
-        array[i] = random.Next(Down, Up);
+        array[i] = random.Next(Begin, End);
     return array;
 }
 
-int evenNumbersCount(int[] array)
+int EvenNumbersCount(int[] array)
 {
-    int count = 0;
+    int counter = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] % 2 == 0)
-            count++;
+            counter++;
     }
-    return count;
+    return counter;
 }
 
-void printArray(int[] array)
+void PrintArray(int[] array)
 {
     Console.Write('[');
     Console.Write(string.Join(", ", array));
@@ -45,8 +45,8 @@ void printArray(int[] array)
 }
 
 Console.WriteLine("Программа возвращает количество четных элементов массива.");
-int dimention = getCorrectNumber();
-int[] myArray = makeArray(dimention);
-int count = evenNumbersCount(myArray);
-printArray(myArray);
+int dimention = GetCorrectNumber();
+int[] myArray = MakeArray(dimention);
+int count = EvenNumbersCount(myArray);
+PrintArray(myArray);
 Console.Write($" -> {count}\n");

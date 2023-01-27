@@ -3,7 +3,7 @@
 Найдите разницу между максимальным и минимальным элементами массива.
 [3 7 22 2 78] -> 76
  */
-int getCorrectNumber()
+int GetCorrectNumber()
 {
     int correctNumber;
     while (true)
@@ -16,7 +16,7 @@ int getCorrectNumber()
     }
 }
 
-decimal[] makeArray(int dimention)
+decimal[] MakeArray(int dimention)
 {
     const int Begin = -100, End = 100;
     decimal[] array = new decimal[dimention];
@@ -44,7 +44,7 @@ decimal[] makeArray(int dimention)
     return (max, min, max - min);
 }
 
-void printArray(decimal[] array)
+void PrintArray(decimal[] array)
 {
     Console.Write("\n[");
     Console.Write(string.Join("  ", array));
@@ -54,9 +54,9 @@ void printArray(decimal[] array)
 Console.WriteLine("\nПрограмма формирует массив из случайных вещественных чисел от -100 до 100, ");
 Console.WriteLine("округленных до 2-х знаков после запятой, возвращает значение максимального, ");
 Console.WriteLine("минимального элемента массива и разницу между ними.\n");
-var dimention = getCorrectNumber();
-decimal[] myArray = makeArray(dimention);
+var dimention = GetCorrectNumber();
+decimal[] myArray = MakeArray(dimention);
 var result = MaxMinDifference(myArray);
-printArray(myArray);
+PrintArray(myArray);
 Console.Write($" -> {result.Item3}\n");
 Console.WriteLine($"Максимальный элемент массива: {result.Item1}, минимальный элемент массива: {result.Item2}.\n");
