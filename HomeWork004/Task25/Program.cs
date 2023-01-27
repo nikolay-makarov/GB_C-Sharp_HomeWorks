@@ -12,7 +12,7 @@ int[] getCorrectNumbers()
     while (true)
     {
         Console.Write("Через запятую введите 2 целых числа. Второе число должно быть больше нуля: ");
-        arr = Console.ReadLine().Split(',');
+        arr = Console.ReadLine()!.Split(',');
         if (int.TryParse(arr[0], out a) && int.TryParse(arr[1], out b) && b >= 1)
         {
             int[] array = { a, b };

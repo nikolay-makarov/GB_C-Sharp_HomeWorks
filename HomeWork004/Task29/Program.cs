@@ -12,7 +12,7 @@ int[] getUserNumbers()
     while (true)
     {
         Console.Write("Через запятую введите 8 целых чисел: ");
-        arr = Console.ReadLine().Split(',');
+        arr = Console.ReadLine()!.Split(',');
         if (arr.Length == 8)
         {
             int value;
