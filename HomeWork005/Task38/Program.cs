@@ -2,7 +2,9 @@
 Задайте массив вещественных чисел.
 Найдите разницу между максимальным и минимальным элементами массива.
 [3 7 22 2 78] -> 76
- */
+*/
+System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+
 int GetCorrectNumber()
 {
     int correctNumber;
