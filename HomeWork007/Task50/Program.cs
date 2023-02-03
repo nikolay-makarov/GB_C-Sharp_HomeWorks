@@ -40,7 +40,6 @@ void PrintMatrix(int[,] matrix)
 void ReturnMatrixElement(int[,] matrix)
 {
     Console.Write("Введите индексы элемента массива (2 натуральных числа, через запятую): ");
-    // int[] indexes = new int[2];
     int rows = 0;
     int columns = 0;
     while (true)
