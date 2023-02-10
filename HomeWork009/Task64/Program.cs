@@ -30,12 +30,12 @@ void RowOfNumbers(int n)
 }
 
 string StringOfNumbers(int n)
-// Вариант решения с возвращаемым значением
+// Вариант решения с возвращаемым в виде строки значением
 {
     if (n > 1)
         return $"{n}, " + StringOfNumbers(n - 1);
     else
-        return 1.ToString();
+        return "1";
 }
 
 int n = GetCorrectNumber("Введите целое положительное число");
